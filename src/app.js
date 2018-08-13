@@ -3,6 +3,7 @@ import {
   Text,
   View,
   StyleSheet,
+  ScrollView,
 } from 'react-native';
 import SideMenu from 'react-native-side-menu';
 
@@ -36,8 +37,10 @@ class App extends Component {
           isOpen={isOpen}
         >
           <Header toggle={this.toggle} />
-          <Slide />
-          <List />
+          <ScrollView>
+            <Slide />
+            <List />
+          </ScrollView>
         </SideMenu>
       </View>
     );

@@ -109,10 +109,11 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     width: width - (width / 4),
-    paddingLeft: 30,
+    paddingHorizontal: 30,
     backgroundColor: '#323232',
     borderRadius: 3,
     fontSize: 18,
+    color: 'white',
   },
   container: {
     flex: 1,
@@ -137,6 +138,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     color: 'white',
+    fontSize: 20,
   },
   searchIcon: {
     position: 'absolute',
@@ -148,7 +150,7 @@ const styles = StyleSheet.create({
   clearIcon: {
     position: 'absolute',
     top: 15,
-    right: 110,
+    left: (width - (width / 4)) - 22,
     zIndex: 1,
     backgroundColor: 'transparent',
   },

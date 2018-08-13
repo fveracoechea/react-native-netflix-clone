@@ -20,28 +20,26 @@ class List extends Component {
   }
   render() { 
     return(
-      <ScrollView style={styles.container}>
-        <View style={styles.container}>
-          <View>
-            <Text style={styles.text}>My List</Text>
-            <FlatList
-              horizontal
-              ItemSeparatorComponent={() => <View style={{width: 5}}/>}
-              renderItem={({ item }) => this.renderItem(item)}
-              data={data}
-            />
-          </View>
-          <View>
-            <Text style={styles.text}>Top Picks For You</Text>
-            <FlatList
-              horizontal
-              ItemSeparatorComponent={() => <View style={{width: 5}}/>}
-              renderItem={({ item }) => this.renderItem(item)}
-              data={data}
-            />
-          </View>
+      <View style={styles.container}>
+        <View>
+          <Text style={styles.text}>My List</Text>
+          <FlatList
+            horizontal
+            ItemSeparatorComponent={() => <View style={{width: 5}}/>}
+            renderItem={({ item }) => this.renderItem(item)}
+            data={data}
+          />
         </View>
-      </ScrollView>
+        <View>
+          <Text style={styles.text}>Top Picks For You</Text>
+          <FlatList
+            horizontal
+            ItemSeparatorComponent={() => <View style={{width: 5}}/>}
+            renderItem={({ item }) => this.renderItem(item)}
+            data={data}
+          />
+        </View>
+      </View>
     );
   }
 }
@@ -49,6 +47,8 @@ class List extends Component {
 const styles = StyleSheet.create({
   text: {
     color: '#eeeeee',
+    fontSize: 20,
+    marginLeft: 4,
   },
   container: {
     flex: 1,
